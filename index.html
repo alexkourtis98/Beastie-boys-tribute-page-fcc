@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Archivo:400,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style-ALEXCOMPUTER.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="landing">
+    <div class="layer">
+    </div>
+    <div class="headings">
+      <h1>Beastie boys</h1>
+      <h3>A short history of of the legendary hip-hop trio.</h3>
+    </div>
+  </div>
+  <div class="text" style="padding: 50px; width: auto;">
+    <br>
+    <span style="text-align: center;">
+      <h1 style="margin: auto;">Beastie Boys</h2>
+    </span>
+    <div style="max-width: 720px; margin: auto;">
+      <p style="width: auto;">A group of three men on a stairwell behind a light background
+        The
+        Beastie Boys
+        in 2009; from
+        left to right:
+        Ad-Rock, MCA and Mike D Background information Origin New York City, New York, U.S. Genres Hip hop rap rock
+        alternative hip hop hardcore punk Years active 1981–2012 Labels Rat Cage Def Jam Capitol Grand Royal Associated
+        acts Rick Rubin Run-DMC Dust Brothers Mario Caldato Jr. LL Cool J Public Enemy Kurtis Blow The Fat Boys Luscious
+        Jackson Whodini Madonna Biz Markie Nas Website beastieboys.com
+      </p>
+    </div>
+    <!-- 
+    <div style="text-align: center;">
+      <div class="card">
+        <span id="vidwrapper">
+          <iframe src="https://www.youtube.com/embed/LIeKdNg3Efg"></iframe>
+        </span>
+        <div class="desc">
+          <p>A glimpse of some of their richful diverse music</p>
+        </div>
+      </div>
+      <div class="card">
+        <span id="vidwrapper">
+          <iframe src="https://www.youtube.com/embed/HkNiQDD3Q8w"></iframe>
+        </span>
+        <div class="desc">
+          <p>MCA's personal transformation over the years</p>
+        </div>
+      </div>
+    </div> -->
+    <div style="max-width: 720px; margin: auto;">
+      <p>Past members John Berry Michael "Mike D" Diamond Kate Schellenbach Adam "MCA" Yauch Adam "Ad-Rock" Horovitz The
+        Beastie Boys were an American hip hop group from New York City formed in 1981. The group comprised Michael "Mike
+        D" Diamond (vocals, drums), Adam "MCA" Yauch (vocals, bass) and Adam "Ad-Rock" Horovitz (vocals, guitar). The
+        Beastie Boys were formed as a four-piece hardcore punk band, the Young Aborigines, in 1979 by Mike D (vocals),
+        MCA
+        (bass), John Berry (guitar) and Kate Schellenbach (drums). They appeared on the compilation cassette New York
+        Thrash, contributing two songs from their first EP, Polly Wog Stew, in 1982. Berry left shortly thereafter and
+        was
+        replaced by Horovitz. After achieving local success with the 1983 experimental hip hop single "Cooky Puss", the
+        Beastie Boys made a full transition to hip hop, and Schellenbach left the group. They toured with Madonna in
+        1985
+        and a year later released their debut album Licensed to Ill. It was followed by Paul's Boutique, Check Your
+        Head,
+        Ill Communication, Hello Nasty, and Hot Sauce Committee Part Two.
+      </p>
+    </div>
+  </div>
+  <br>
+
+  <div class="wrapper">
+    <div id="renderhere">
+    </div>
+  </div>
+
+  <div class="playerwrapper blue" id="addHere">
+  </div>
+
+  <!-- Messenger Chat Plugin Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Chat Plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "101359518719268");
+    chatbox.setAttribute("attribution", "biz_inbox");
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v11.0'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+<script>
+  const INDEX = 0;
+  let images;
+  let songs;
+
+  async function getSongs() {
+    songs = await fetch('./songs.json')
+      .then(response => response.json())
+      .catch(err => console.log(error));
+
+    return songs;
+  };
+
+  async function getImages() {
+    images = await fetch('./images.json')
+      .then(response => response.json())
+      .catch(err => console.log(error));
+
+    return images;
+  };
+
+  function displayWithTransition(id) {
+    let newimage = document.getElementById(id);
+    Promise.all([
+      document.getElementById(id).style.opacity = 0,
+      timeout(200)
+    ]);
+    document.getElementById(id).style.opacity = 1;
+  }
+
+  function addHtml(htmlElem, image) {
+    htmlElem.innerHTML = "<div id='" + image.id + "' style='background: url(" + image.src + ") no-repeat center; padding: 20px; background-size: 100% 100%; display: flex; justify-content: space-between; align-items: center;' class='trans big'><div onclick='goleft()' class='button__arrow button button__arrow--left'  style='float: left;'></div><div onclick = 'goright()' style='float: right' class='button__arrow button button__arrow--right'></div>";
+  }
+
+  function addSongHtml(song) {
+  }
+
+  function renderSong(song) {
+    const addHereElem = document.getElementById("addHere");
+    addHereElem.innerHTML = "<div id='generalwrapper'><div id='logowrapper'> <img src=''./ favicon.png' id='logo'> </div> <div class='details'>" + song.name + " | " + song.album + " | " + song.releasedate + " <br><br> <div> <audio controls> <source src=" + song.src + " type='audio/mpeg'></audio></div></div><div onclick='nextSong()' class='music-control__forward' id='forward'><img src='https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/forward.svg'></div></div></div>";
+    const logoElem = document.getElementById("logowrapper");
+    logoElem.innerHTML = " <img src=" + song.thumbnail + " id='logo' alt='thumbnail'> ";
+  }
+
+  function render(image) {
+    let htmlElem = document.getElementById("renderhere");
+
+    addHtml(htmlElem, image);
+    displayWithTransition(image.id)
+  }
+
+  function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async function init() {
+    await getImages();
+    await getSongs();
+
+    if (images != null) {
+      console.log(images[INDEX])
+      render(images[INDEX]);
+    }
+
+    if (songs != null) {
+      console.log(songs[INDEX])
+      renderSong(songs[INDEX]);
+    }
+  }
+
+  function nextSong() {
+    let song = songs.pop();
+    songs.unshift(song);
+    renderSong(songs[INDEX]);
+  }
+
+  function goleft() {
+    let firstimage = images.pop();
+    images.unshift(firstimage);
+    render(images[INDEX]);
+  }
+
+  function goright() {
+    let lastimage = images.shift();
+    images.push(lastimage);
+    render(images[INDEX]);
+  }
+
+  init();
+</script>
+
+</html>

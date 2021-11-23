@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Something's Got To Give",
+        "src": "something.mp3",
+        "album": "Check Your Head",
+        "releasedate": "1992",
+        "thumbnail": "https://philspector.files.wordpress.com/2017/08/bboys-3.jpg"
+    },
+    {
+        "id": 2,
+        "src": "./check.mp3",
+        "name": "Ch-Check It Out",
+        "album": "To the 5 Boroughs",
+        "releasedate": "2004",
+        "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/91pBFF64j-L._SL1400_.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Alive",
+        "src": "alive.mp3",
+        "album": "Beastie Boys Anthology: The Sounds of Science",
+        "releasedate": "1999",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/en/1/1b/Alive_Beastie_Boys.jpg"
+    }
+]

@@ -1,0 +1,255 @@
+.landing {
+  height: 100vh;
+  background: url("./beastie-boys-facebook.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 47px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.layer {
+  background-color: rgba(51, 5, 15, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  font-family: "Montserrat", sans-serif;
+}
+
+.details {
+  font-family: "Montserrat", sans-serif;
+}
+.text p {
+  margin: 15px;
+  padding: 10px;
+  word-spacing: 2.5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+footer {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  background-color: #efefef;
+  text-align: center;
+}
+
+.headings {
+  font-family: "Archivo", sans-serif;
+  color: white;
+  z-index: 1;
+}
+
+.headings h1 {
+  font-size: 4em;
+}
+
+.headings h3 {
+  font-size: 1.5em;
+}
+
+.card {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  margin: 20px;
+  background-color: white;
+  transition: 0.2s ease-out;
+  box-shadow: 0px 5px 20px #efefef;
+}
+
+.card:hover {
+  box-shadow: 0px 5px 20px #d4d4d4;
+  transform: scale(1.014);
+}
+
+.card p {
+  margin: 12px 05px auto;
+}
+
+.copyright {
+  padding-top: 19px;
+}
+
+iframe {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 88%;
+  transition: 0.3s ease-out;
+  background-color: black;
+}
+
+@media only screen and (max-width: 650px) {
+  p {
+    margin: 10px;
+  }
+}
+
+div {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+.trans {
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.big {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.button {
+  margin: 80px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.button__arrow {
+  height: 30px;
+  width: 30px;
+}
+
+.button__arrow--right:hover {
+  border-right: 2px solid rgb(255, 255, 255, 1);
+  border-top: 2px solid rgba(255, 255, 255, 1);
+}
+
+.button__arrow--left:hover {
+  border-left: 2px solid rgba(255, 255, 255, 1);
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+.button__arrow--right {
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -ms-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  transform: translateX(-25%) rotate(45deg);
+}
+
+.button__arrow--nextsong {
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -ms-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  transform: translateX(-25%) rotate(45deg);
+}
+
+.button__arrow--left {
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -ms-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  transform: translateX(25%) rotate(45deg);
+}
+
+#renderhere {
+  width: 100vw;
+  height: 100vh;
+}
+
+.playerwrapper {
+  padding: 10px !important;
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  color: white !important;
+}
+
+.blue {
+  background: rgba(0, 0, 0, 0.5); /* Black color with 50% alpha/opacity */
+}
+
+#logowrapper img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  float: left !important;
+}
+
+#logowrapper {
+  padding: 10px !important;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+}
+
+.details {
+  width: 500px;
+  float: right;
+}
+
+#generalwrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+audio {
+  width: 100% !important;
+}
+
+#test {
+  display: inline-block;
+  height: 53px;
+  width: 53px;
+  cursor: pointer;
+  background: url(https://521dimensions.com/img/open-source/amplitudejs/examples/dynamic-songs/next.svg);
+  vertical-align: middle;
+  margin-right: 24px;
+}
+
+.music-control__forward {
+  height: 1.21em;
+  cursor: pointer;
+}
+
+#forward img {
+  width: 50px !important;
+}
